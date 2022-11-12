@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>browsers</title>
+</head>
+<body>
+	<input type="text" id="x" placeholder="x">
+	<br><br>
+	<input type="button" onclick="out()" value="OutPut">
+	<script type="text/javascript">
+					document.writeln(navigator.userAgent);
+		function out() {
+			var x = document.getElementById('x').value;
+			var agent = navigator.userAgent;
+			if(/Chrome/.test(agent))
+			{
+				document.writeln(3 * x + 5);
+
+			}
+			if(/Firefox/.test(agent))
+			{
+				document.writeln(-x + 2);
+
+			}
+			if(/Opera/.test(agent))
+			{
+				document.writeln(4 + x);
+
+			}
+			if(/Yandex/.test(agent))
+			{
+				document.writeln( 2 * x + 11);
+
+			}
+		}
+	</script>
+</body>
+</html>
